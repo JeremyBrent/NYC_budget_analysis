@@ -14,10 +14,7 @@ The data set has a column called "First Fiscal Year" that denotes when the speci
 ### Question 1: Where is NYC appropriating its fund?
 The dataset denotes the "Project Type Name" by agency. For example, Education, Housing & Development, Correction, Parks, etc. are considered Project Types. Based on the aggregated "Total Budget Amount," the top five most funded agencies or projects are: (1) Education: $112,630,941,060 / (2) Housing & Development: $38,876,057,247 / (3) Highway Bridges: $34,740,067,684 / (4) Water Pollution Control: $34,699,038,138 / and (5) Highways: $30,484,289,218. Corrections has the 6th highest funding amount at $25,285,190,537 and Police has the 16th higest funding amount at $7,649,723,283.
 
-<video width="320" height="240" controls>
-  <source src="./Images/Total_budget_spending.mov" type="video/mp4">
-</video>
-The video above highlights the amount of money budgeted for education and police for the four fiscal years following the "First Fiscal Year"
+<img src='./Images/budget_spending_by_project.png' alt="budget spending by project type">
 
 There has recently been calls for defunding the police department; that the NYPD had a budget of "almost 6 billion for the fiscal year of 2020" (<a href="https://www.cnn.com/2020/07/01/us/new-york-budget-nypd-1-billion-cut-trnd/index.html"> article link </a>). Again, I by no means am expressing my political opinion about 'defunding the police department' but based on the findings from the dataset I analyzed, it seems as though the cries for the excessiveness of the NYPD budget were politically motivated and rhetorical in nature, not neccesarily citing data for the claims. That being said, navigating the NYC Office of Management and Budget is not the most user friendly experience; the complexities of the cities budget makes it difficult to understand exactly what is being expressed; It is possible that the article cited above and the many more are citing a different data source then the one I analyzed. 
 
