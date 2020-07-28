@@ -1,1 +1,5 @@
-# Citi_Bike_analysis
+# New York City Budget Analysis
+
+Much controversery has fallen upon city budgets for their perceived excessive funding to police departments. As a data scientist, I strive to formulate opinions through the  data. Therefore, I decided to dive into the data. I was inspired to see if the rhetoric about police spending in NYC was based in reality or political ideology. With that, the majority of the analysis will be framed around police spending.  I do want to note that as this can be a controversial topic, the findings of this analysis do not convey my political ideologies or beliefs in any capacity. 
+
+New York Cities capital budget can be found <a href="https://data.cityofnewyork.us/City-Government/Capital-Budget/46m8-77gv"> here </a>. I strived to answer a handfull of questions: (1) Where is NYC appropriating its fund? (2) Are budget appropriations increasing or decreasing over time for specific agencies(i.e. education, police, etc.)? and (3) What specific project is money being appropriated to in different departments?
