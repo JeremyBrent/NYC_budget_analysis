@@ -2,13 +2,20 @@
 
 ## Motivation
 
-Much controversy has fallen upon city budgets for their perceived excessive funding to police departments. As a data scientist, I strive to formulate opinions through the data. Therefore, I decided to dive into New York Cities Capital Budget. The capital budget "presents the funding plans for city construction and repair projects, and purchases of land, buildings, or equipment" (<a href="https://www.ibo.nyc.ny.us/iboreports/IBOCBG.pdf"> citation </a>). I was inspired to see if the rhetoric about police spending in NYC was based in reality or political ideology. There have been recent claims that the NYPD had a budget of "almost $6 billion for the fiscal year of 2020" (<a href="https://www.cnn.com/2020/07/01/us/new-york-budget-nypd-1-billion-cut-trnd/index.html"> article link </a>). With that, the majority of the analysis will be framed around police spending.  I do want to note that as this can be a controversial topic, the findings of this analysis do not convey my political ideologies or beliefs in any capacity. 
+Much controversy has fallen upon city budgets for their perceived excessive funding to police departments. As a data scientist, I strive to formulate opinions through the data. Therefore, I decided to dive into New York Cities Expense Budget for fiscal year 2021. I was inspired to see if the rhetoric about police spending in NYC was based in reality or political ideology. There have been recent claims that the NYPD had a budget of "almost $6 billion for the fiscal year of 2020" (<a href="https://www.cnn.com/2020/07/01/us/new-york-budget-nypd-1-billion-cut-trnd/index.html"> article link </a>). With that, the majority of the analysis will be framed around police spending.  I do want to note that as this can be a controversial topic, the findings of this analysis do not convey my political ideologies or beliefs in any capacity. 
 
-## Data and questions
-New York Cities’ capital budget can be found <a href="https://data.cityofnewyork.us/City-Government/Capital-Budget/46m8-77gv"> here </a>. I targeted to answer three questions in my analysis: (1) Where is NYC appropriating its fund? (2) Are budget appropriations increasing or decreasing over time for specific agencies/projects (i.e. education, police, etc.)? and (3) Within agencies/projects, where is money being appropriated?
+## Dataset
+New York Cities’ expense budget can be found <a href="https://data.cityofnewyork.us/City-Government/Expense-Budget/mwzb-yiwb"> here </a>.
 
-## Assumptions/Data manipulations
-The data set has a column called "First Fiscal Year" that denotes when the specific project will begin or began receiving funding. Funding started or starts for 33.86% projects in 2019, 33.17% in 2020 and 32.96% in 2021 (found <a href= "./eda.ipynb"> here </a>).  The following columns are "Fiscal Year 1 Amount," "Fiscal Year 2 Amount," and so on until "Fiscal Year 4 Amount." In order to aggregate the data, I created a "Total Budget Amount" column that reflects the sum of the four fiscal year amounts without particular regard to the "first fiscal year.'  
+## Questions
+I targeted to answer three questions in my analysis: (1)How much and what percentage of the budget is appriopriated for each agency? (2) Are budget appropriations increasing or decreasing over time for specific agencies/projects (i.e. education, police, etc.)? and (3) Within agencies/projects, where is money being appropriated?
+
+## Data cleaning and assumptions
+In order for a seamless analysis, I used Python and Pandas to manipulate the dataset in a jupyter notebook. The dataset's column dictionary can be found <a href="./Data/Expense_budget_dictionary.xlsx"> here </a>. Columns such as the Budget Code, Object class and object code, agency name, etc. had both a descriptive column and a quantitative, codified column. For the analysis I deleted the codified column as it would be easier to interpret findings with descriptive names. 
+
+The dataset also contained three columns that measured the size of the appropriation: (1) "Adopted Budgeted Amount", (2) "Financial Plan Amount" and (3) "Current Modified Budget Amount." After analyzing the similarities in the descriptive statistics for each column, I determined that an average for each record would be best for each analysis. The data manipulation can be found <a href='./eda.ipynb'> here </a>.
+
+Fiscal Year columns contains some data errors. The unique values in the column are 1, 4, 60, 70, 2017, 2018, 2019, 2020, 2021. Intuitevely the values preceeding 2017 seem to be errors. I decided to remove these records for the analysis but it is curious that the same errors are repeated more then a couple of times.
 
 ## Analysis 
 ### Question 1: Where is NYC appropriating its fund?
