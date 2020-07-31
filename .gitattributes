@@ -1,3 +1,2 @@
 Data/Expense_Budget_Cleaned.csv filter=lfs diff=lfs merge=lfs -text
 Data/Expense_Budget.csv filter=lfs diff=lfs merge=lfs -text
-Images_2/citi-bike-station-bikes.jpg diff=lfs merge=lfs -text
